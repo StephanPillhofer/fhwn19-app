@@ -4,7 +4,6 @@ let should = chai.should();
 
 chai.use(chaiHttp);
 
-//Our parent block
 describe('Simple Node Website', () => {
   //Test the /GET route
   describe('/GET ', () => {
