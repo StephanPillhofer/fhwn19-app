@@ -1,8 +1,20 @@
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
-    });
+let chai = require('chai');
+let chaiHttp = require('chai-http');
+let should = chai.should();
+
+chai.use(chaiHttp);
+
+//Our parent block
+describe('Simple Node Website', () => {
+  //Test the /GET route
+  describe('/GET ', () => {
+      it('it should GET the website', (done) => {
+        chai.request('https://fhwn19-node-app-12.azurewebsites.net')
+            .get('/')
+            .end((err, res) => {
+                  res.should.have.status(200);
+              done();
+            });
+      });
   });
 });
