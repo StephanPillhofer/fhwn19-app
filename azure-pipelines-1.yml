@@ -14,7 +14,7 @@ variables:
   dockerRegistryServiceConnection: '91248bc4-b956-403e-935c-c78925e5d782'
   imageRepository: 'nodeimage'
   containerRegistry: 'pillhoferregistry.azurecr.io'
-  dockerfilePath: 'Dockerfile' #**/Dockerfile
+  dockerfilePath: '**/Dockerfile' #**/Dockerfile
   tag: '$(Build.BuildId)'
   imagePullSecret: 'pillhoferregistry73c4-auth'
 
